@@ -1,0 +1,8 @@
+{
+	"server": "localhost\\SQLEXPRESS",
+	"database": "mono",
+	"user": "sa",
+	"password": "sa",
+	"port": 1433
+}
+

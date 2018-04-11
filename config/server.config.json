@@ -1,0 +1,6 @@
+{
+	"port": 8008,
+	"ALERTAS": {
+		"TRAMA_CORRUPTA": "La trama enviada está corrupta o no cumple con los requisitos mínimos de consumo https://github.com/ISWPOLI/Monotributo/blob/backend-node/docs/juan/tablaApis.md"
+	}
+}
