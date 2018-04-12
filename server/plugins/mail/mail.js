@@ -2,7 +2,6 @@ import nodemailer from 'nodemailer';
 import CONFIG from '../../../config/mail.config.json'
 import TemplateBuilder from './templateBuilder';
 
-var encryptor = require('simple-encryptor')('IVSECRET IVSECRET IVSECRET IVSECRET');
 
 class IVEmail {
 	constructor() {

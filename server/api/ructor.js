@@ -1,4 +1,4 @@
-import connection from '../db.connection';
+import Connection from '../db.connection';
 /**
  * Esta clase contiene el crud global, todas las apis se deben conectar acá para realizar 
  * cualquier tipo de sentencia SQL 
@@ -6,7 +6,7 @@ import connection from '../db.connection';
 class Ructor {
 
 	constructor(table) {
-		this.db = connection.connect;
+		this.db = new Connection();
 		this.table = table;
 	}
 

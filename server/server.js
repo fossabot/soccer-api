@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import Router from './api/router';
 import fs from 'fs';
+import Connection from './db.connection';
 //Config
 import SERVER_CONFIG from '../config/server.config.json';
 
@@ -28,7 +29,7 @@ class Server {
 	}
 
 	connected() {
-		console.log('connected');
+		console.log(`✔️  REST API CONNECTED PORT: ${SERVER_CONFIG.port}`);
 	}
 }
 

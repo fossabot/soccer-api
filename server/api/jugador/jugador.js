@@ -1,13 +1,13 @@
 import express from 'express';
 import Ructor from '../ructor.js';
-import PeluqueriaModel from './peluqueria.model';
+import MJugador from './jugador.model';
 import SRV_CONFIG from '../../../config/server.config.json'
 
-//La ruta de consumo sería http://<ip|localhost>:<puerto>/peluqueria
-class Peluqueria {
+//La ruta de consumo sería http://<ip|localhost>:<puerto>/contribuyente
+class Jugador {
 	constructor() {
-		this.db = new Ructor('peluqueria');
-		this.schema = new PeluqueriaModel();
+		//this.db = new Ructor('contribuyente');
+		//this.schema = new JugadorModel();
 		//
 		this.get = this.get.bind(this);
 		this.getById = this.getById.bind(this);
@@ -18,9 +18,9 @@ class Peluqueria {
 		this.schemaValidator = this.schemaValidator.bind(this);
 		//
 		this.router = express.Router();
-		this.path = '/peluqueria';
-		//peluqueria mapping
-		this.router.use(this.path,this.schemaValidator);
+		this.path = '/jugador';
+		//contribuyente mapping
+		this.router.use(this.path, this.schemaValidator);
 		this.router.get(this.path, this.get);
 		this.router.get(`${this.path}/:id`, this.getById);
 		this.router.post(this.path, this.post);
@@ -33,7 +33,7 @@ class Peluqueria {
 
 	schemaValidator(req, res, next) {
 
-		let body = req.body;
+		/*let body = req.body;
 		//Si tiene cuerpo 
 		if (body) {
 			this.schema.police(body) ? next() : res.send(SRV_CONFIG.ALERTAS.TRAMA_CORRUPTA);
@@ -42,7 +42,9 @@ class Peluqueria {
 		} else {
 			//Si no es get y no tiene cuerpo 
 			res.send(SRV_CONFIG.ALERTAS.TRAMA_CORRUPTA)
-		}
+		}*/
+
+		next();
 	}
 	//./funciona
 	getById(req, res, next) {
@@ -54,32 +56,29 @@ class Peluqueria {
 	}
 	//./funciona
 	get(req, res, next) {
-		this.db.all().then((result) => {
-			res.send(result.recordset);
-		});
+
+
 	}
 	//./funciona
 	post(req, res, next) {
-		this.db.insert(req.body)
-			.then((result) => {
-				res.send(result.recordset);
-			});
+		
+		new MJugador(req.body).save()
+			.then((data) => res.send(data))
+			.catch((err) => res.send(err));
 	}
 
 	put(req, res, next) {
-		this.db.update(this.jsonToString(req.body.val), this.jsonToString(req.body.where)).then((result) => {
-			res.send(result.recordset);
-		});
+
 	}
 
 	patch(req, res, next) {
-		res.send('peluqueria  patch');
+
 	}
 
 	delete(req, res, next) {
-		res.send('peluqueria delete');
+
 	}
 
 }
 
-module.exports = Peluqueria;
+module.exports = Jugador;

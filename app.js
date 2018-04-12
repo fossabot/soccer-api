@@ -1,5 +1,4 @@
+import LOAD_ENV_CONFIG from './load.env';
 import Server from './server/server';
-import dotenv from 'dotenv';
 
-dotenv.load();
 new Server();
