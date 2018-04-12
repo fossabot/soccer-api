@@ -5,7 +5,8 @@
 	"main": "app.js",
 	"scripts": {
 		"test": "mocha --compilers js:babel-register",
-		"start": "nodemon --exec babel-node app.js --presets env,stage-2"
+		"start": "nodemon --exec babel-node app.js --presets env,stage-2",
+		"debug": "nodemon --inspect --exec  babel-node app.js --presets env,stage-2"
 	},
 	"author": "",
 	"license": "ISC",
