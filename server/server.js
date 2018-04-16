@@ -17,8 +17,11 @@ class Server {
 		//Console logger
 		this.app.use(morgan('dev'));
 
-		this.router = new Router(this.app);
-		this.start();
+		Connection.connect()
+			.then((connection)=>{
+				this.router = new Router(this.app);
+				this.start();
+			});
 	}
 
 	start() {

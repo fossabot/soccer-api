@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import Connection from '../../db.connection';
 
-class JugadorSchema {
+class MJugador  {
 	constructor() {
 		this.schema = mongoose.Schema({
 			//attrs
@@ -21,7 +21,7 @@ class JugadorSchema {
 			registrar: this.registrar
 		};
 
-		return this.schema;
+		return Connection.instance.model('MJugador', this.schema);
 	}
 
 	getLogin() {
@@ -34,4 +34,4 @@ class JugadorSchema {
 	}
 }
 
-module.exports = new Connection().model('MJugador', new JugadorSchema());
+module.exports = MJugador;

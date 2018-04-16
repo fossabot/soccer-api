@@ -2,31 +2,30 @@ import express from 'express';
 import Ructor from '../ructor.js';
 import MJugador from './jugador.model';
 import SRV_CONFIG from '../../../config/server.config.json'
+
 //La ruta de consumo sería http://<ip|localhost>:<puerto>/contribuyente
-class Jugador {
+class Equipo {
 	constructor() {
-		//Model jugador
-		this.dbJugador = new MJugador();
-		//Instancias de funciones asincronas
+		//this.db = new Ructor('contribuyente');
+		//this.schema = new JugadorModel();
+		//
 		this.get = this.get.bind(this);
 		this.getById = this.getById.bind(this);
 		this.post = this.post.bind(this);
 		this.put = this.put.bind(this);
-		this.search = this.search.bind(this);
+		this.patch = this.patch.bind(this);
 		this.delete = this.delete.bind(this);
 		this.schemaValidator = this.schemaValidator.bind(this);
-		//ruteador
+		//
 		this.router = express.Router();
-		//Path de consumo
-		this.path = '/jugador';
-		//Primer middleware, evalua si la trama que se envia es correcta
+		this.path = '/equipo';
+		//contribuyente mapping
 		this.router.use(this.path, this.schemaValidator);
-		//Mapa de ruteo
 		this.router.get(this.path, this.get);
 		this.router.get(`${this.path}/:id`, this.getById);
-		this.router.post(`${this.path}/search`, this.search);
 		this.router.post(this.path, this.post);
 		this.router.put(this.path, this.put);
+		this.router.patch(this.path, this.patch);
 		this.router.delete(this.path, this.delete);
 		//
 		return this.router;
@@ -47,40 +46,39 @@ class Jugador {
 
 		next();
 	}
-
+	//./funciona
 	getById(req, res, next) {
-		this.dbJugador.findById(req.params.id)
-			.then((data) => res.send(data))
-			.catch((err) => res.end(err));
+		//req.params.id
+		console.log(req.params)
+		this.db.findBy(req.params.id).then((result) => {
+			res.send(result.recordset);
+		});
 	}
-
+	//./funciona
 	get(req, res, next) {
-		this.dbJugador.find()
-			.then((data) => res.send(data))
-			.catch((err) => res.end(err));
-	}
 
-	search(req,res,next){
-		this.dbJugador.find(req.body)
-			.then((data) => res.send(data))
-			.catch((err) => res.end(err));
+
 	}
-	//Metodo post = insert database
+	//./funciona
 	post(req, res, next) {
-		let jugador = new this.dbJugador(req.body);
-		jugador.save()
+		
+		new MJugador(req.body).save()
 			.then((data) => res.send(data))
 			.catch((err) => res.send(err));
 	}
 
 	put(req, res, next) {
-		this.dbJugador.findById(req.params.id)
+
+	}
+
+	patch(req, res, next) {
 
 	}
 
 	delete(req, res, next) {
-		
+
 	}
+
 }
 
-module.exports = Jugador;
+module.exports = Equipo;
