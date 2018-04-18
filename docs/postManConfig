@@ -1,0 +1,371 @@
+{
+	"info": {
+		"name": "Soccer-Api",
+		"_postman_id": "cddc2ef9-065c-e86a-102f-f8db1555b33f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Jugador",
+			"description": "",
+			"item": [
+				{
+					"name": "Obtener todos los jugadores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8008/jugador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"jugador"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar nuevo Jugador",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Ivan\",\n\t\"apellido\": \"Martinez\",\n\t\"correo\": \"juanmarfil9696@gmail.com\",\n\t\"contrasena\": \"123\",\n\t\"lider\": false,\n\t\"estado\": \"A\",\n\t\"descripcion\": \"Soy un jugador incapaz\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8008/jugador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"jugador"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener jugador por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8008/jugador/5ad79946f11d5a727c0a9e5d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"jugador",
+								"5ad79946f11d5a727c0a9e5d"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar jugador por campo especifico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Juan Sebastián\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8008/jugador/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"jugador",
+								"search"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar jugador",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Andreco\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8008/jugador/5ad79946f11d5a727c0a9e5d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"jugador",
+								"5ad79946f11d5a727c0a9e5d"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar jugador por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8008/jugador/5ad7984ef11d5a727c0a9e5c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"jugador",
+								"5ad7984ef11d5a727c0a9e5c"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Equipo",
+			"description": "",
+			"item": [
+				{
+					"name": "Obtener todos los equipos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8008/equipo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"equipo"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar nuevo equipo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Los pablos2\",\n\t\"descripcion\": \"somos un equipo muy bueno :D!\",\n\t\n\t\"integrantes\": [\n\t\t\"5ad79946f11d5a727c0a9e5d\",\n\t\t\"5ad7a43c2da92b1e9d4f7295\",\n\t\t\"5ad7ade73238fb92e58edea0\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8008/equipo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"equipo"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar equipo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"estado\": \"I\",\n    \"integrantes\": [\n        \"5ad79946f11d5a727c0a9e5d\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8008/equipo/5ad7ba726010bec9747c3ea7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"equipo",
+								"5ad7ba726010bec9747c3ea7"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Partido",
+			"description": "",
+			"item": [
+				{
+					"name": "Obtener todos los equipos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8008/equipo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"equipo"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar nuevo equipo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nombre\": \"Los pablos2\",\n\t\"descripcion\": \"somos un equipo muy bueno :D!\",\n\t\n\t\"integrantes\": [\n\t\t\"5ad79946f11d5a727c0a9e5d\",\n\t\t\"5ad7a43c2da92b1e9d4f7295\",\n\t\t\"5ad7ade73238fb92e58edea0\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8008/equipo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"equipo"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar equipo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"estado\": \"I\",\n    \"integrantes\": [\n        \"5ad79946f11d5a727c0a9e5d\"\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8008/equipo/5ad7ba726010bec9747c3ea7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8008",
+							"path": [
+								"equipo",
+								"5ad7ba726010bec9747c3ea7"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Enviar correo mendiante api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"to\":\"mortombolo@gmail.com\",\r\n\t\"template\": \"BIENVENIDO\",\r\n\t\"metadata\": {\r\n\t\t\"nombreUsuario\": \"Juan Sebastián González Rivera\",\r\n\t\t\"body\": \"Los contribuyentes que opten por acogerse al monotributo deberán inscribirse en el Registro Único Tributario como contribuyentes del mismo antes del 31 de mayo en el 2017 y antes del 31 de marzo para los siguientes años. Quienes se inscriban como contribuyentes del monotributo no estarán sometidos al régimen ordinario del impuesto sobre la renta y complementarios por el respectivo año gravable.\"\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8008/status/testMail",
+					"host": [
+						"localhost"
+					],
+					"port": "8008",
+					"path": [
+						"status",
+						"testMail"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

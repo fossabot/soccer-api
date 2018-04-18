@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import DB_CONFIG from '../config/db.config.json';
 
 /**
+ * @SINGLETON 
  * Clase estatica que administra la conexión a la base de datos
  */
 class Connection {

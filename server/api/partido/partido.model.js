@@ -1,32 +1,35 @@
 import mongoose, { Schema } from 'mongoose';
 import Connection from '../../db.connection';
-import EQUIPO_SCHEMA from './equipo.schema.json';
+import PARTIDO_SCHEMA from './partido.schema.json';
 import Ajv from 'ajv';
 /**
- * Clase encargada de estructurar el esquema de la entidad MEquipo
+ * Clase encargada de estructurar el esquema de la entidad MPartido
  * asì como atributos y funciones 
- * @class MEquipo
+ * @class MPartido
  */
-class MEquipo {
+class MPartido {
 	/**
-	 * Creates an instance of MEquipo.
-	 * @memberof MEquipo
+	 * Creates an instance of MPartido.
+	 * @memberof MPartido
 	 */
 	constructor() {
 		this.schema = mongoose.Schema({
 			//attrs
 			id: Number,
-			nombre: String,
-			descripcion: String,
-			foto: String,
-			categoria: String,
+			marcador: String,
+			lugar: String,
 			estado: {
 				type: String,
 				default: 'A'
 			},
-			integrantes: [{
+			fecha: String,
+			equipos: [{
 				type: Schema.Types.ObjectId,
-				ref: 'MJugador'
+				ref: "MEquipo"
+			}],
+			resenas:  [{
+				type: Schema.Types.ObjectId,
+				ref: "MResena"
 			}]
 		});
 		//Funciones del modelo
@@ -34,18 +37,18 @@ class MEquipo {
 			police: this.police
 		};
 		//Instancia para validar la trama de entrada
-		return Connection.instance.model('MEquipo', this.schema);
+		return Connection.instance.model('MPartido', this.schema);
 	}
 	/**
 	 * Funciòn estatica 
 	 * Retorna falso o verdadero dependiendo si la trama corresponde con la validaciòn
 	 * @param {any} reqBody es la trama a evaluar
 	 * @returns Boolean
-	 * @memberof MEquipo
+	 * @memberof MPartido
 	 */
 	police(reqBody) {
-		return new Ajv().compile(EQUIPO_SCHEMA)(reqBody);
+		return new Ajv().compile(PARTIDO_SCHEMA)(reqBody);
 	}
 }
 
-module.exports = MEquipo;
+module.exports = MPartido;

@@ -13,7 +13,8 @@ class TemplateBuilder {
 	}
 
 	/**
-	 * Se adjuntas las variables @@ en caso de haber, sino solo se borrará
+	 * Se adjuntas las variables @@ en caso de haber metadata en el cuerpo del template, 
+	 * sino solo se borrará
 	 */
 	prepareTemplate(template) {
 		template.html = fs.readFileSync(__dirname + `/templates/${template.html}`, 'utf8');
@@ -24,6 +25,7 @@ class TemplateBuilder {
 		}
 	}
 
+	//Función encargada de construir el cuerpo del correo electronico
 	builder(template) {
 		this.prepareTemplate(template);
 		return {

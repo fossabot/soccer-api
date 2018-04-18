@@ -1,0 +1,29 @@
+{
+	"additionalProperties": false,
+	"properties": {
+		"nombre": {
+			"type": "string"
+		},
+		"apellido": {
+			"type": "string"
+		},
+		"correo": {
+			"type": "string"
+		},
+		"contrasena": {
+			"type": "string"
+		},
+		"lider": {
+			"type": "boolean"
+		},
+		"estado": {
+			"type": "string"
+		},
+		"urlFoto": {
+			"type": "string"
+		},
+		"descripcion": {
+			"type": "string"
+		}
+	}
+}

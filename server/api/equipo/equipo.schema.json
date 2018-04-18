@@ -1,0 +1,23 @@
+{
+	"additionalProperties": false,
+	"properties": {
+		"nombre": {
+			"type": "string"
+		},
+		"foto": {
+			"type": "string"
+		},
+		"estado": {
+			"type": "string"
+		},
+		"descripcion": {
+			"type": "string"
+		},
+		"categoria": {
+			"type": "string"
+		},
+		"integrantes": {
+			"type": "array"
+		}
+	}
+}

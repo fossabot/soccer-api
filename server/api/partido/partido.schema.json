@@ -1,0 +1,23 @@
+{
+	"additionalProperties": false,
+	"properties": {
+		"marcador": {
+			"type": "string"
+		},
+		"lugar": {
+			"type": "string"
+		},
+		"estado": {
+			"type": "string"
+		},
+		"fecha": {
+			"type": "string"
+		},
+		"equipos": {
+			"type": "array"
+		},
+		"resenas": {
+			"type": "array"
+		}
+	}
+}
