@@ -30,25 +30,25 @@ El estilo de codificación implementado será tomado de *"JavaScript Standard St
 
 Los archivos de codigo fuente estarán demarcados con un identificador del mismo estarán contenidos en las carpetas que describe su modulo o sub modulo.
 
-![Alt text](estructuraGeneral.jpg)
+![Alt text](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/estructuraGeneral.JPG)
 
 #### **2.1.1 Carpeta API**
 
 Cada api tendra su carpeta y tendrá tres archivos: `{nombre_api.schema}.js` que tendrá el esquema de valicación, `{nombre_api}.model.js` dónde se describirá el modelo de la entidad mongoose, y `{nombre_api}.js`  será el controlador del api.
 
-![Alt text](estructuraApis.jpg)
+![Alt text](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/estructuraApis.JPG)
 
 #### **2.1.2 Carpeta Plugins**
 
 En esta carpeta aqí se crearán los diferentes microservicios y middlewares que se vayan presentando, por ejemplo existirá un plugin llamado mail, que será el modulo encargado de enviar correos y tendrá su propio estructura de carpetas
 
-![Alt text](estructuraPlugins.jpg)
+![Alt text](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/estructuraPlugins.JPG)
 
 #### **2.1.3 Carpeta Configuración**
 
 Los archivos de configuración estarán demarcados por `{nombre_archivo}.config.json` y allí se encontrarán todas las configuraciones que se puedan modificar en producción, tembién estarán las configuraciones de los plugins 
 
-![Alt text](estructuraConfig.jpg)
+![Alt text](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/estructuraConfig.JPG)
 
 ### **2.2 Codigo fuente**
 
@@ -62,7 +62,7 @@ Los comentarios en el código suelen dar una vista general del código y brindan
 
 #### **2.2.1 Comentarios de clases**
 
-![Alt text](comentariosCode.jpg)
+![Alt text](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/comentariosCode.JPG)
 
 Como se ve en la imagen se debe definir en los comentarios que tipo de clase es `@singleton`, `@class`, `@interface`, y una breve descrioción de su funcionalidad.
 
@@ -76,7 +76,7 @@ class Api { ...
 
 #### **2.2.2 Comentarios de funciones**
 
-![Alt text](estructuraMetodo.jpg)
+![Alt text](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/estructuraMetodo.JPG)
 
 Como se ve en la imagen se debe dar una breve descripcion de la funcionalidad, `@param` definirá el tipo de parametro es y una descripción del mismo, `@memberof` definirá a que clase corresponde, esto por si es necesario hacer sobreescritura de algun metodo.
 
@@ -165,5 +165,5 @@ git commit -m "Titulo del commit" -m "Descripción del commit"
 git push origin <nombre_branch|master>
 ```
 
-
-##### Soccer League </br> Institución Educativa Politecnico Grancolombiano </br> Ingeniería de software </br> 2018
+ 
+##### Soccer League |</br> Institución Educativa Politecnico Grancolombiano |</br> Ingeniería de software |</br> 2018
