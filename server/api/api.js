@@ -4,7 +4,7 @@ import SRV_CONFIG from '../../config/server.config.json'
 /**
  * 
  * Clase experta en informaciòn, cada api creada deberá heredar de esta
- * @class Api
+ * @singleton Api
  */
 class Api {
 	/**
@@ -42,9 +42,9 @@ class Api {
 
 	/**
 	 * 
-	 * 
-	 * @param {any} req 
-	 * @param {any} res 
+	 * Valida el esquema 
+	 * @param {any} req => trama recibida 
+	 * @param {any} res => respuesta a enviar 
 	 * @param {any} next 
 	 * @memberof Api
 	 */
@@ -68,8 +68,8 @@ class Api {
 	/**
 	 * 
 	 * Obtiene la entidad segùn el ID del mismo
-	 * @param {any} req => request
-	 * @param {any} res => response
+	 * @param {any} req => trama recibida
+	 * @param {any} res => respuesta a enviar 
 	 * @param {any} next => ejecuta el siguiente middleware
 	 * @memberof Api
 	 */
@@ -81,8 +81,8 @@ class Api {
 	/**
 	 * 
 	 * Obtiene todos los registros de la entidad maximo: 500
-	 * @param {any} req => request
-	 * @param {any} res => response
+	 * @param {any} req => trama recibida
+	 * @param {any} res => respuesta a enviar 
 	 * @param {any} next => ejecuta el siguiente middleware
 	 * @memberof Api
 	 */
@@ -94,8 +94,8 @@ class Api {
 	/**
 	 * 
 	 * Obtiene los registros que coincidan con los parametros de busqueda
-	 * @param {any} req => request
-	 * @param {any} res => response
+	 * @param {any} req => trama recibida
+	 * @param {any} res => respuesta a enviar 
 	 * @param {any} next => ejecuta el siguiente middleware
 	 * @memberof Api
 	 */
@@ -106,8 +106,8 @@ class Api {
 	}
 	/**
 	 * Inserta un registro segùn la entidad instanciada
-	 * @param {any} req => request
-	 * @param {any} res => response
+	 * @param {any} req => trama recibida
+	 * @param {any} res => respuesta a enviar 
 	 * @param {any} next => ejecuta el siguiente middleware
 	 * @memberof Api
 	 */
@@ -120,8 +120,8 @@ class Api {
 	/**
 	 * 
 	 * Actualiza los campos enviados en la trama segùn el id de la entidad enviada en la url
-	 * @param {any} req => request
-	 * @param {any} res => response
+	 * @param {any} req => trama recibida
+	 * @param {any} res => respuesta a enviar 
 	 * @param {any} next => ejecuta el siguiente middleware
 	 * @memberof Api
 	 */
