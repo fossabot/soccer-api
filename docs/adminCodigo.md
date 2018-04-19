@@ -10,7 +10,7 @@ El objetivo de este documento es brindar los lineamientos que se deben tener en 
 
 ### **1.2 Alcance**
 
-El alcance de este documento es establecer las mejoras prácticas aplicables a los desarrollos de software enmarcadas en un plan de administración de código de la fase de análisis para el Sistema desarrollado por el Centro de Investigación y Desarrollo de Información Geográfica CIAF.
+El alcance de este documento es establecer las mejoras prácticas aplicables a los desarrollos de software enmarcadas en un plan de administración de código de la fase de análisis para el Sistema Soccer League
 
 ### **1.3 Referencias**
 
@@ -46,7 +46,7 @@ En esta carpeta aqí se crearán los diferentes microservicios y middlewares que
 
 #### **2.1.3 Carpeta Configuración**
 
-Los archivos de configuración estarán demarcados por `{nombre_archivo}.config.json` y allí se encontrarán todas las configuraciones que se puedan modificar en producción, tembién estarán las configuraciones de los plugins 
+Los archivos de configuración estarán demarcados por `{nombre_archivo}.config.json` y allí se encontrarán todas las configuraciones que se puedan modificar en producción, tembién estarán las configuraciones de los plugins
 
 ![Alt text](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/estructuraConfig.JPG)
 
@@ -82,10 +82,9 @@ Como se ve en la imagen se debe dar una breve descripcion de la funcionalidad, `
 
 ```javascript
 /**
- * 
  * Actualiza los campos enviados en la trama segùn el id de la entidad enviada en la url
  * @param {any} req => trama recibida
- * @param {any} res => respuesta a enviar 
+ * @param {any} res => respuesta a enviar
  * @param {any} next => ejecuta el siguiente middleware
  * @memberof Api
  */
@@ -95,7 +94,7 @@ class Api { ...
 
 ### **2.3 Declaraciones**
 
-Se recomienda seguir las siguientes reglas de codificación 
+Se recomienda seguir las siguientes reglas de codificación
 
 - Para indexación se debe usar `tab` de tamaño 2, para facilidad se puede crear un archivo `.editorconfig` y pegar la siguietne configuración:
 
@@ -155,7 +154,7 @@ Para tener una copia del proyecto se debe ejecutar el siguiente comando, para es
 git clone git@github.com:jugonzalez40/soccer-api.git
 ```
 
-### **3.2 Clonar repositorio**
+### **3.2 Subir ccambios**
 
 Para subir los cambios guardados al repositorio `GitHub` se deben ejutar los siguientes comandos en ese orden
 
@@ -165,5 +164,4 @@ git commit -m "Titulo del commit" -m "Descripción del commit"
 git push origin <nombre_branch|master>
 ```
 
- 
 ##### Soccer League |</br> Institución Educativa Politecnico Grancolombiano |</br> Ingeniería de software |</br> 2018
