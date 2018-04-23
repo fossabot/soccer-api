@@ -1,4 +1,4 @@
-import ServerStatus from './serverStatus';
+import Basics from './basics/basics';
 import Jugador from './jugador/jugador';
 import Equipo from './equipo/equipo';
 import Partido from './partido/partido';
@@ -17,7 +17,7 @@ class Router {
 		this.app.use(new Equipo());
 		this.app.use(new Partido());
 		this.app.use(new Resena());
-		this.app.use(new ServerStatus());
+		this.app.use(new Basics());
 		return this.app.route;
 	}
 }

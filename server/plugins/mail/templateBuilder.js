@@ -1,14 +1,14 @@
 import Log from 'simple-node-logger';
 import fs from 'fs';
+import Logger from '../../tools/logger.tool';
 import EMAIL_CONFIG from '../../../config/mail.config.json';
 import TEMPLATES_CONFIG from '../../../config/templates.config.json';
 
 class TemplateBuilder {
 
 	constructor(email) {
+		this.log = new Logger(this.constructor.name);
 		this.email = email;
-		this.log = Log.createSimpleLogger('logs/server.log');
-		this.log.setLevel('all');
 		return this.builder(JSON.parse(JSON.stringify(TEMPLATES_CONFIG[this.email.template])));
 	}
 
@@ -17,11 +17,15 @@ class TemplateBuilder {
 	 * sino solo se borrará
 	 */
 	prepareTemplate(template) {
-		template.html = fs.readFileSync(__dirname + `/templates/${template.html}`, 'utf8');
-		for (let key in template) {
-			for (let metaKey in this.email.metadata) {
-				template[key] = template[key].replace(`@@${metaKey}`, this.email.metadata[metaKey] || '');
+		try {
+			template.html = fs.readFileSync(__dirname + `/templates/${template.html}`, 'utf8');
+			for (let key in template) {
+				for (let metaKey in this.email.metadata) {
+					template[key] = template[key].replace(`@@${metaKey}`, this.email.metadata[metaKey] || '');
+				}
 			}
+		} catch (error) {
+			this.log.error(error);
 		}
 	}
 
@@ -29,7 +33,7 @@ class TemplateBuilder {
 	builder(template) {
 		this.prepareTemplate(template);
 		return {
-			from: `"Monotributo"<${EMAIL_CONFIG.client.auth.user}>`,
+			from: `"Soccer League"<${EMAIL_CONFIG.client.auth.user}>`,
 			to: this.email.to,
 			subject: template.subject,
 			html: template.html
