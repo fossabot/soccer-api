@@ -54,7 +54,6 @@ class MJugador {
 		return new Ajv().compile(JUGADOR_SCHEMA)(reqBody);
 	}
 
-
 	sendMailConfirm() {
 		let mail = {
 			template: 'BIENVENIDO',
