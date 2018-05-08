@@ -87,3 +87,10 @@
 ::1 - - [24/Apr/2018:05:17:32 +0000] "POST /jugador HTTP/1.1" 200 216
 ::1 - - [08/May/2018:02:23:01 +0000] "POST /status/sendMail HTTP/1.1" 404 155
 ::1 - - [08/May/2018:02:23:17 +0000] "POST /basics/sendMail HTTP/1.1" 200 309
+::1 - - [08/May/2018:02:29:30 +0000] "POST /basics/sendMail HTTP/1.1" 200 305
+::1 - - [08/May/2018:02:31:53 +0000] "GET /jugador HTTP/1.1" 200 480
+::1 - - [08/May/2018:02:31:53 +0000] "GET /favicon.ico HTTP/1.1" 404 150
+::1 - - [08/May/2018:03:18:29 +0000] "POST /basics/sendMail HTTP/1.1" 200 317
+::1 - - [08/May/2018:03:38:05 +0000] "GET /jugador/confirmEmail/454asd HTTP/1.1" 500 2396
+::1 - - [08/May/2018:03:39:30 +0000] "GET /jugador/confirmEmail/454asd HTTP/1.1" 500 2344
+::1 - - [08/May/2018:03:40:22 +0000] "GET /jugador/confirmEmail/454asd HTTP/1.1" 500 2344

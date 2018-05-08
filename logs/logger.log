@@ -23,3 +23,7 @@ ReferenceError: SMS_COfNFIG is not defined
 16:41:24.678 INFO  {"message-count":"1","messages":[{"to":"573197053513","message-id":"0B000000D0A5C265","status":"0","remaining-balance":"1.84850000","message-price":"0.05050000","network":"732123"}]} 
 21:23:17.427 INFO  🎌 INFO ON IVEmail 
 21:23:17.427 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":383,"messageTime":1161,"messageSize":77404,"response":"250 2.0.0 OK 1525746196 u1-v6sm3853017vkf.37 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<67e9cd16-010e-b505-09d7-9a8b4f9d8eb7@gmail.com>"} 
+21:29:30.718 INFO  🎌 INFO ON IVEmail 
+21:29:30.718 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":287,"messageTime":537,"messageSize":5976,"response":"250 2.0.0 OK 1525746570 x46sm8320554uab.37 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<28da0363-6e84-811f-464b-62c1323c3245@gmail.com>"} 
+22:18:29.561 INFO  🎌 INFO ON IVEmail 
+22:18:29.561 INFO  {"accepted":["ycarolinatovar51@gmail.com"],"rejected":[],"envelopeTime":490,"messageTime":1153,"messageSize":6651,"response":"250 2.0.0 OK 1525749509 v29sm7252723uav.7 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["ycarolinatovar51@gmail.com"]},"messageId":"<20fd9e2f-99e9-a597-856f-84099c3e2d28@gmail.com>"} 
