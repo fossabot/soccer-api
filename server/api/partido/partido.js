@@ -11,7 +11,7 @@ class Partido extends Api {
 	 */
 	constructor() {
 		//Llama al constructor de la clase API y guarda el mapa del router para modificaciònes posteriormente
-		let _router = super(MPartido, '/partido');
+		let _router = super(new MPartido(), '/partido');
 		this.router = _router;
 	}
 }

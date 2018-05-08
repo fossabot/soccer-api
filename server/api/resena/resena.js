@@ -11,7 +11,7 @@ class Resena extends Api {
 	 */
 	constructor() {
 		//Llama al constructor de la clase API y guarda el mapa del router para modificaciònes posteriormente
-		let _router = super(MResena, '/resena');
+		let _router = super(new MResena(), '/resena');
 		this.router = _router;
 	}
 }

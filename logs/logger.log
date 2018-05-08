@@ -27,3 +27,13 @@ ReferenceError: SMS_COfNFIG is not defined
 21:29:30.718 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":287,"messageTime":537,"messageSize":5976,"response":"250 2.0.0 OK 1525746570 x46sm8320554uab.37 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<28da0363-6e84-811f-464b-62c1323c3245@gmail.com>"} 
 22:18:29.561 INFO  🎌 INFO ON IVEmail 
 22:18:29.561 INFO  {"accepted":["ycarolinatovar51@gmail.com"],"rejected":[],"envelopeTime":490,"messageTime":1153,"messageSize":6651,"response":"250 2.0.0 OK 1525749509 v29sm7252723uav.7 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["ycarolinatovar51@gmail.com"]},"messageId":"<20fd9e2f-99e9-a597-856f-84099c3e2d28@gmail.com>"} 
+15:18:15.357 INFO  🎌 INFO ON IVEmail 
+15:18:15.357 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":700,"messageTime":695,"messageSize":6618,"response":"250 2.0.0 OK 1525810695 f7-v6sm3465130vkg.55 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<13b66653-8800-0849-6d42-fd27abee21a9@gmail.com>"} 
+15:22:14.896 INFO  🎌 INFO ON IVEmail 
+15:22:14.896 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":324,"messageTime":751,"messageSize":6618,"response":"250 2.0.0 OK 1525810935 x15-v6sm3941227vkd.5 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<5d334238-e2be-ddc9-24a9-4d108880bb87@gmail.com>"} 
+15:22:35.531 INFO  🎌 INFO ON IVEmail 
+15:22:35.531 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":327,"messageTime":519,"messageSize":6618,"response":"250 2.0.0 OK 1525810955 79sm8268192ual.3 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<b7c295af-4397-a02e-fb65-44585e7a04ee@gmail.com>"} 
+15:34:11.909 INFO  🎌 INFO ON IVEmail 
+15:34:11.909 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":343,"messageTime":639,"messageSize":6618,"response":"250 2.0.0 OK 1525811652 22sm6410615uah.19 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<c245333f-c054-b6cd-6742-8b8c421f1c62@gmail.com>"} 
+15:34:36.284 INFO  🎌 INFO ON IVEmail 
+15:34:36.284 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":330,"messageTime":495,"messageSize":6618,"response":"250 2.0.0 OK 1525811676 s10-v6sm6425912vks.44 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<e6757ca9-4621-7ff6-7148-184a431adc71@gmail.com>"} 

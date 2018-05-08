@@ -15,7 +15,7 @@ class Api {
 	 */
 	constructor(Entity, pathApi) {
 		//Instancia a la base de datos para la entidad jugador, solo se hace una vez	
-		this.dbEntity = new Entity();
+		this.dbEntity = Entity;
 		//Se hace binding a funciones asincronas para que puedan manipular this
 		this.get = this.get.bind(this);
 		this.getById = this.getById.bind(this);

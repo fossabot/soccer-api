@@ -11,7 +11,7 @@ class Equipo extends Api {
 	 */
 	constructor() {
 		//Llama al constructor de la clase API y guarda el mapa del router para modificaciònes posteriormente
-		let _router = super(MEquipo, '/equipo');
+		let _router = super(new MEquipo(), '/equipo');
 		this.router = _router;
 	}
 }

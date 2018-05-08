@@ -3,6 +3,7 @@ import Connection from '../../db.connection';
 import JUGADOR_SCHEMA from './jugador.schema.json';
 import Ajv from 'ajv';
 import IVEmail from '../../plugins/mail/mail';
+import SERVER_CONFIG from '../../../config/server.config.json'
 /**
  * Clase encargada de estructurar el esquema de la entidad MJugador
  * asì como atributos y funciones 
@@ -32,11 +33,13 @@ class MJugador {
 				default: false
 			}
 		});
-		//Funciones del modelo
+		//Funciones
 		this.schema.methods = {
 			police: this.police,
 			sendMailConfirm: this.sendMailConfirm
 		};
+		//Triggers
+		this.schema.post('save', this.afterTrigger)
 		//Instancia para validar la trama de entrada
 		return Connection.instance.model('MJugador', this.schema);
 	}
@@ -52,14 +55,20 @@ class MJugador {
 	}
 
 
-	sendMailConfirm(id){
-		this.model('MJugador').findById(id)
-			.then(entity => {
-				console.log(entity);
-				entity.confirmEmail('5adbe8456306a20e80324cf8');
-				
-			})
-			.catch(err => res.send(err));
+	sendMailConfirm() {
+		let mail = {
+			template: 'BIENVENIDO',
+			to: this.correo,
+			metadata: {
+				nombreUsuario: `${this.apellido} ${this.nombre}`,
+				confirmEmailApi: `${SERVER_CONFIG.protocol}://${SERVER_CONFIG.domain}:${SERVER_CONFIG.port}/jugador/confirmEmail/${this._id}`
+			}
+		};
+		return new IVEmail().send(mail);
+	}
+
+	afterTrigger(jugador, next) {
+		return jugador.confirmado ? Promise.resolve(true) : jugador.sendMailConfirm();
 	}
 }
 
