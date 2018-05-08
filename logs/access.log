@@ -82,3 +82,8 @@
 ::1 - - [23/Apr/2018:21:38:27 +0000] "POST /basics/sendSms HTTP/1.1" 200 2
 ::1 - - [23/Apr/2018:21:41:24 +0000] "POST /basics/sendSms HTTP/1.1" 200 182
 ::1 - - [23/Apr/2018:21:49:56 +0000] "POST /basics/sendMail HTTP/1.1" 200 304
+::1 - - [24/Apr/2018:05:09:16 +0000] "POST /jugador HTTP/1.1" 200 290
+::1 - - [24/Apr/2018:05:10:08 +0000] "GET /jugador/5adebbfb89f6510c609c7b02 HTTP/1.1" 200 290
+::1 - - [24/Apr/2018:05:17:32 +0000] "POST /jugador HTTP/1.1" 200 216
+::1 - - [08/May/2018:02:23:01 +0000] "POST /status/sendMail HTTP/1.1" 404 155
+::1 - - [08/May/2018:02:23:17 +0000] "POST /basics/sendMail HTTP/1.1" 200 309

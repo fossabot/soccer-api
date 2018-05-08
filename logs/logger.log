@@ -21,3 +21,5 @@ ReferenceError: SMS_COfNFIG is not defined
     at next (D:\user\documents\u\ing\soccer-api\node_modules\express\lib\router\index.js:275:10) 
 16:41:24.678 INFO  🎌 INFO ON IVSms 
 16:41:24.678 INFO  {"message-count":"1","messages":[{"to":"573197053513","message-id":"0B000000D0A5C265","status":"0","remaining-balance":"1.84850000","message-price":"0.05050000","network":"732123"}]} 
+21:23:17.427 INFO  🎌 INFO ON IVEmail 
+21:23:17.427 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":383,"messageTime":1161,"messageSize":77404,"response":"250 2.0.0 OK 1525746196 u1-v6sm3853017vkf.37 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<67e9cd16-010e-b505-09d7-9a8b4f9d8eb7@gmail.com>"} 
