@@ -1,39 +1,45 @@
 # Manual tecnico - Integración REST API
 
-Este documento tendrá como proposito explicar y dar ejemplos para poder consumir las apis de manera correcta, esta se conectará a mongo para extraer los datos y manipularlos desde el backend.
+> Este documento tendrá como propósito explicar y dar ejemplos para poder consumir las apis de manera correcta, esta se conectará a mongo para extraer los datos y manipularlos desde el backend.
 
 ## **Estructura general**
 
-Cada api tendrá por defecto las siguientes rutas de consumo con sus metodos respectivos, en caso que un api determinada no tenga la estructura general o esta sea modificada se marcará con un 🚩
+> Cada api tendrá por defecto las siguientes rutas de consumo con sus métodos respectivos, en caso que un api determinada no tenga la estructura general o esta sea modificada se marcará con un 🚩
 
 | Metodo | Url                            | Descripción                                             |
 |:------ |:------------------------------ |:------------------------------------------------------- |
 | GET    | /```nombre_api```              | Obtiene todos los registros del api correspondiente     |
 | GET    | /```nombre_api```/```:id```    | Obtiene el registro según el id                         |
 | POST   | /```nombre_api```              | Registra un nuevo elemento en la base de datos          |
-| PUT    | /```nombre_api```/```:id```    | Actualiza un unico registro                             |
+| PUT    | /```nombre_api```/```:id```    | Actualiza un único registro                             |
 | DELETE | /```nombre_api```/```:id```    | Elimina el registro correspondiente                     |
 | POST   | /```nombre_api```/```search``` | Busca los registros correspondientes a la trama enviada |
 
-⚠️ NOTA: Para los metodos, ```DELETE``` y  ```GET``` no debe haber trama (cuerpo del paquete)
+⚠️ NOTA: Para los métodos, ```DELETE``` y  ```GET``` no debe haber trama (cuerpo del paquete)
 
-⚠️ NOTA 2: El metodo ```PUT``` tendrá parametros(id_entidad) en la url como trama
+⚠️ NOTA 2: El método ```PUT``` tendrá parámetros(id_entidad) en la url como trama
+
+
+
+
+
+
+
+
+
+
 
 ## **APIS**
 
-A continuación se listará cada una de las apis con trama(request) y sus respectivos campos obligatorios para cada metodo, el metodo GET no se tomará ya que no posee una trama(request)
+> A continuación se listará cada una de las apis con trama(request) y sus respectivos campos obligatorios para cada método, el método GET no se tomará ya que no posee una trama
+> 
+> ✔️ = Atributo obligatorio en el método correspondiente.
+> 
+> 🏴 = Atributo opcional.
+> 
+> ❌ = Se omite este campo.
 
-```json
-✔️ = Atributo obligatorio en el metodo correspondiente.
-
-🏴 = Atributo opcional.
-
-❌ = Se omite este campo.
-```
-
-### **Jugador**
-
-**Nombre API:** ``jugador``
+## **Jugador**
 
 **Ruta consumo:** ``http://localhost:8008/jugador``
 
@@ -41,7 +47,7 @@ A continuación se listará cada una de las apis con trama(request) y sus respec
 
 ```json
 {
-   "nombre": "Juan Sebastiàn",
+   "nombre": "Juan Sebastián",
    "apellido": "González Rivera",
    "correo": "juanmarfil9696@gmail.com",
    "contrasena": "123",
@@ -63,11 +69,7 @@ A continuación se listará cada una de las apis con trama(request) y sus respec
 | ```estado```      | 🏴️  | 🏴  |
 | ```descripcion``` | 🏴   | 🏴  |
 
-### **Equipo**
-
----
-
-**Nombre API:** ``equipo``
+## **Equipo**
 
 **Ruta consumo**: ``http://localhost:8008/equipo``
 
@@ -99,9 +101,19 @@ A continuación se listará cada una de las apis con trama(request) y sus respec
 | ```estado```      | 🏴️  | 🏴  |
 | ```integrantes``` | 🏴️  | 🏴  |
 
-#### **Partido**
 
-**Nombre API:**  ``partido``
+
+
+
+
+
+
+
+
+
+
+
+## **Partido**
 
 **Ruta consumo:** ``http://localhost:8008/partido``
 
@@ -134,9 +146,17 @@ A continuación se listará cada una de las apis con trama(request) y sus respec
 | ```equipos```  | 🏴️  | 🏴  |
 | ```resenas```  | 🏴️  | 🏴  |
 
-#### **Reseña**
 
-**Nombre API:** ``resena``
+
+
+
+
+
+
+
+
+
+## **Reseña**
 
 **Ruta consumo**: ``http://localhost:8008/resena``
 
@@ -158,20 +178,50 @@ A continuación se listará cada una de las apis con trama(request) y sus respec
 | ```jugador```     | ✔️   | 🏴  |
 | ```estado```      | ✔️   | 🏴  |
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## **Common API**
 
-Las rutas a continuación no corresponden a la estructura general de las apis, ya que tienen diferente funcionalidad del crud, estarán catalogadas por metodo de consumo.
+> Las rutas a continuación no corresponden a la estructura general de las apis, ya que tienen diferente funcionalidad del crud, estarán catalogadas por método de consumo.
 
-### **GET**
+## **GET**
 
-| Url                            | Descripción                                             |
-|:------------------------------ |:------------------------------------------------------- |
-| ```http://localhost:8008/jugador/sendMailConfirm/{idUsuario}``` | Envía el correo de confirmación al usuario según el id establecido en la url  |
-| ```http://localhost:8008/jugador/confirmEmail/{idUsuario}```    | Confirma la cuenta si el idUsuario cuenta con una confirmación pendiente      |
+| Url                                                             | Descripción                                                                  |
+|:--------------------------------------------------------------- |:---------------------------------------------------------------------------- |
+| ```http://localhost:8008/jugador/sendMailConfirm/{idUsuario}``` | Envía el correo de confirmación al usuario según el id establecido en la url |
+| ```http://localhost:8008/jugador/confirmEmail/{idUsuario}```    | Confirma la cuenta si el idUsuario cuenta con una confirmación pendiente     |
 
-### **POST**
+## **POST**
 
-| Url                            | Descripción                                             |Petición|
-|:------------------------------ |:------------------------------------------------------- |:-------|
-| ```http://localhost:8008/basics/sendMail``` | Envía un correo de acuerdo al cuerpo de la petición  |  |
-| ```http://localhost:8008/basics/sendSms```  | Envía un mensaje por sms de acuerdo al cuerpo de la petición | |
+| Url                                         | Descripción                                                  | Petición                                                                                                |
+|:------------------------------------------- |:------------------------------------------------------------ |:------------------------------------------------------------------------------------------------------- |
+| ```http://localhost:8008/basics/sendMail``` | Envía un correo de acuerdo al cuerpo de la petición          | ![RequesMail](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/postRequesMail.JPG) |
+| ```http://localhost:8008/basics/sendSms```  | Envía un mensaje por sms de acuerdo al cuerpo de la petición | ![RequesSMs](https://raw.githubusercontent.com/jugonzalez40/soccer-api/master/docs/postRequestSMS.JPG)  |
+
+> ##### Para visualizar este documento adecuadamente consultar la siguiente [url](https://github.com/jugonzalez40/soccer-api/blob/master/docs/arquitecturaAPIS.md): https://github.com/jugonzalez40/soccer-api/blob/master/docs/arquitecturaAPIS.md
+
+##### Soccer League | Institución Educativa Politécnico Grancolombiano | Ingeniería de software | 2018
