@@ -112,3 +112,4 @@
 ::1 - - [08/May/2018:20:34:36 +0000] "POST /jugador HTTP/1.1" 200 208
 ::1 - - [08/May/2018:20:36:01 +0000] "GET /jugador/confirmEmail/5af209dad0e644690c1af2af HTTP/1.1" - -
 ::1 - - [08/May/2018:20:36:47 +0000] "GET /jugador/confirmEmail/5af209dad0e644690c1af2af HTTP/1.1" 200 36
+::1 - - [09/May/2018:18:39:45 +0000] "POST /jugador HTTP/1.1" 200 257

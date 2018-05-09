@@ -1,8 +1,8 @@
-# Estructura de APIS
+# Manual tecnico - Integración REST API
 
-Este documento describirá cada una de las rutas, sus posibles entradas, el esquema de cada petición si tiene y sus posibles respuestas
+Este documento tendrá como proposito explicar y dar ejemplos para poder consumir las apis de manera correcta, esta se conectará a mongo para extraer los datos y manipularlos desde el backend.
 
-## Estructura general
+## **Estructura general**
 
 Cada api tendrá por defecto las siguientes rutas de consumo con sus metodos respectivos, en caso que un api determinada no tenga la estructura general o esta sea modificada se marcará con un 🚩
 
@@ -19,11 +19,11 @@ Cada api tendrá por defecto las siguientes rutas de consumo con sus metodos res
 
 ⚠️ NOTA 2: El metodo ```PUT``` tendrá parametros(id_entidad) en la url como trama
 
-## APIS
+## **APIS**
 
 A continuación se listará cada una de las apis con trama(request) y sus respectivos campos obligatorios para cada metodo, el metodo GET no se tomará ya que no posee una trama(request)
 
-```
+```json
 ✔️ = Atributo obligatorio en el metodo correspondiente.
 
 🏴 = Atributo opcional.
@@ -31,51 +31,27 @@ A continuación se listará cada una de las apis con trama(request) y sus respec
 ❌ = Se omite este campo.
 ```
 
-### Jugador
+### **Jugador**
 
-- ```nombre_api``` = jugador```
-- ```url``` = .../jugador
-- Trama (request)
+**Nombre API:** ``jugador``
 
-  ```json
-  {
-    "nombre": "Juan Sebastiàn",
-    "apellido": "González Rivera",
-    "correo": "juanmarfil9696@gmail.com",
-    "contrasena": "123",
-    "lider": false,
-    "estado": "A",
-    "descripcion": "Soy un jugador capaz..."
-  }
-  ```
+**Ruta consumo:** ``http://localhost:8008/jugador``
 
-| Atributo          | POST | PUT |
-|:----------------- |:---- |:--- |
-| ```nombre```      | ✔️   | 🏴  |
-| ```apellido```    | ✔️   | 🏴  |
-| ```correo```      | ✔️   | 🏴  |
-| ```contrasena```  | ✔️   | 🏴  |
-| ```lider```       | 🏴️  | 🏴  |
-| ```estado```      | 🏴️  | 🏴  |
-| ```descripcion``` | 🏴   | 🏴  |
+**Ejemplo trama:**
 
-### Equipo
+```json
+{
+   "nombre": "Juan Sebastiàn",
+   "apellido": "González Rivera",
+   "correo": "juanmarfil9696@gmail.com",
+   "contrasena": "123",
+   "lider": false,
+   "estado": "A",
+   "descripcion": "Soy un jugador capaz..."
+}
+```
 
-- ```nombre_api``` = equipo
-- ```url``` = .../equipo
-- Trama (request)
-
-  ```json
-  {
-    "nombre": "Juan Sebastiàn",
-    "apellido": "González Rivera",
-    "correo": "juanmarfil9696@gmail.com",
-    "contrasena": "123",
-    "lider": false,
-    "estado": "A",
-    "descripcion": "Soy un jugador capaz..."
-  }
-  ```
+**Obligatoriedad:**
 
 | Atributo          | POST | PUT |
 |:----------------- |:---- |:--- |
@@ -87,58 +63,115 @@ A continuación se listará cada una de las apis con trama(request) y sus respec
 | ```estado```      | 🏴️  | 🏴  |
 | ```descripcion``` | 🏴   | 🏴  |
 
-### Partido
+### **Equipo**
 
-- ```nombre_api``` = partido
-- ```url``` = .../partido
-- Trama (request)
+---
 
-  ```json
-  {
-    "nombre": "Juan Sebastiàn",
-    "apellido": "González Rivera",
-    "correo": "juanmarfil9696@gmail.com",
-    "contrasena": "123",
-    "lider": false,
-    "estado": "A",
-    "descripcion": "Soy un jugador capaz..."
-  }
-  ```
+**Nombre API:** ``equipo``
 
-| Atributo          | POST | PUT |
-|:----------------- |:---- |:--- |
-| ```nombre```      | ✔️   | 🏴  |
-| ```apellido```    | ✔️   | 🏴  |
-| ```correo```      | ✔️   | 🏴  |
-| ```contrasena```  | ✔️   | 🏴  |
-| ```lider```       | 🏴️  | 🏴  |
-| ```estado```      | 🏴️  | 🏴  |
-| ```descripcion``` | 🏴   | 🏴  |
+**Ruta consumo**: ``http://localhost:8008/equipo``
 
-### Reseña
+**Ejemplo trama:**
 
-- ```nombre_api``` = resena
-- ```url``` = .../resena
-- Trama (request)
+```json
+{
+   "nombre": "Las aguilas",
+   "descripcion": "Descripción...",
+   "foto": "Base64/path",
+   "categoria": "A|B|C",
+   "estado": "A",
+   "integrantes": [
+      "idJugador1",
+      "idJugador2",
+      "idJugador3"
+   ]
+}
+```
 
-  ```json
-  {
-    "nombre": "Juan Sebastiàn",
-    "apellido": "González Rivera",
-    "correo": "juanmarfil9696@gmail.com",
-    "contrasena": "123",
-    "lider": false,
-    "estado": "A",
-    "descripcion": "Soy un jugador capaz..."
-  }
-  ```
+**Obligatoriedad:**
 
 | Atributo          | POST | PUT |
 |:----------------- |:---- |:--- |
 | ```nombre```      | ✔️   | 🏴  |
-| ```apellido```    | ✔️   | 🏴  |
-| ```correo```      | ✔️   | 🏴  |
-| ```contrasena```  | ✔️   | 🏴  |
-| ```lider```       | 🏴️  | 🏴  |
+| ```descrpcion```  | ✔️   | 🏴  |
+| ```foto```        | ✔️   | 🏴  |
+| ```categoria```   | ✔️   | 🏴  |
 | ```estado```      | 🏴️  | 🏴  |
-| ```descripcion``` | 🏴   | 🏴  |
+| ```integrantes``` | 🏴️  | 🏴  |
+
+#### **Partido**
+
+**Nombre API:**  ``partido``
+
+**Ruta consumo:** ``http://localhost:8008/partido``
+
+**Ejemplo trama:**
+
+```json
+  {
+    "marcador": "1-1",
+    "lugar": "Galerías cancha Sintetica",
+    "estado": "A",
+    "fecha": "2018/05/24 14:00:00",
+    "equipos": [
+      "idEquipo1",
+      "idEquipo2"
+    ],
+    "resenas": [
+      "idResena1",
+      "idResena2",
+      "idResena3"
+    ]
+  }
+```
+
+| Atributo       | POST | PUT |
+|:-------------- |:---- |:--- |
+| ```marcador``` | ✔️   | 🏴  |
+| ```lugar```    | ✔️   | 🏴  |
+| ```estado```   | ✔️   | 🏴  |
+| ```fecha```    | ✔️   | 🏴  |
+| ```equipos```  | 🏴️  | 🏴  |
+| ```resenas```  | 🏴️  | 🏴  |
+
+#### **Reseña**
+
+**Nombre API:** ``resena``
+
+**Ruta consumo**: ``http://localhost:8008/resena``
+
+**Ejemplo trama:**
+
+```json
+{
+   "puntaje": "5",
+   "descripcion": "El partido estuvo reñido pero...",
+      "jugador": "idJugador1",
+      "estado": "A"
+}
+```
+
+| Atributo          | POST | PUT |
+|:----------------- |:---- |:--- |
+| ```puntaje```     | ✔️   | 🏴  |
+| ```descripcion``` | ✔️   | 🏴  |
+| ```jugador```     | ✔️   | 🏴  |
+| ```estado```      | ✔️   | 🏴  |
+
+## **Common API**
+
+Las rutas a continuación no corresponden a la estructura general de las apis, ya que tienen diferente funcionalidad del crud, estarán catalogadas por metodo de consumo.
+
+### **GET**
+
+| Url                            | Descripción                                             |
+|:------------------------------ |:------------------------------------------------------- |
+| ```http://localhost:8008/jugador/sendMailConfirm/{idUsuario}``` | Envía el correo de confirmación al usuario según el id establecido en la url  |
+| ```http://localhost:8008/jugador/confirmEmail/{idUsuario}```    | Confirma la cuenta si el idUsuario cuenta con una confirmación pendiente      |
+
+### **POST**
+
+| Url                            | Descripción                                             |Petición|
+|:------------------------------ |:------------------------------------------------------- |:-------|
+| ```http://localhost:8008/basics/sendMail``` | Envía un correo de acuerdo al cuerpo de la petición  |  |
+| ```http://localhost:8008/basics/sendSms```  | Envía un mensaje por sms de acuerdo al cuerpo de la petición | |

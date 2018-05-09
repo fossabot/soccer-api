@@ -37,3 +37,5 @@ ReferenceError: SMS_COfNFIG is not defined
 15:34:11.909 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":343,"messageTime":639,"messageSize":6618,"response":"250 2.0.0 OK 1525811652 22sm6410615uah.19 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<c245333f-c054-b6cd-6742-8b8c421f1c62@gmail.com>"} 
 15:34:36.284 INFO  🎌 INFO ON IVEmail 
 15:34:36.284 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":330,"messageTime":495,"messageSize":6618,"response":"250 2.0.0 OK 1525811676 s10-v6sm6425912vks.44 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<e6757ca9-4621-7ff6-7148-184a431adc71@gmail.com>"} 
+13:39:45.799 INFO  🎌 INFO ON IVEmail 
+13:39:45.799 INFO  {"accepted":["malizarazo3@poligran.edu.co"],"rejected":[],"envelopeTime":416,"messageTime":999,"messageSize":6691,"response":"250 2.0.0 OK 1525891185 q38sm17973906uah.16 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["malizarazo3@poligran.edu.co"]},"messageId":"<92bca68e-d326-2e43-83b2-08697b176d4b@gmail.com>"} 
