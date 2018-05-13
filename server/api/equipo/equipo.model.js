@@ -20,6 +20,7 @@ class MEquipo {
 			descripcion: String,
 			foto: String,
 			categoria: String,
+			privado: Boolean,
 			estado: {
 				type: String,
 				default: 'A'

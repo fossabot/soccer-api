@@ -18,6 +18,9 @@
 		},
 		"integrantes": {
 			"type": "array"
+		},
+		"privado": {
+			"type": "boolean"
 		}
 	}
 }

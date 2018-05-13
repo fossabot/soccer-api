@@ -39,3 +39,15 @@ ReferenceError: SMS_COfNFIG is not defined
 15:34:36.284 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":330,"messageTime":495,"messageSize":6618,"response":"250 2.0.0 OK 1525811676 s10-v6sm6425912vks.44 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<e6757ca9-4621-7ff6-7148-184a431adc71@gmail.com>"} 
 13:39:45.799 INFO  🎌 INFO ON IVEmail 
 13:39:45.799 INFO  {"accepted":["malizarazo3@poligran.edu.co"],"rejected":[],"envelopeTime":416,"messageTime":999,"messageSize":6691,"response":"250 2.0.0 OK 1525891185 q38sm17973906uah.16 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["malizarazo3@poligran.edu.co"]},"messageId":"<92bca68e-d326-2e43-83b2-08697b176d4b@gmail.com>"} 
+20:40:42.066 INFO  🎌 INFO ON IVEmail 
+20:40:42.066 INFO  {"accepted":["juanasda@asdas.com"],"rejected":[],"envelopeTime":527,"messageTime":814,"messageSize":6624,"response":"250 2.0.0 OK 1526175642 f8-v6sm1688795uaj.26 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["juanasda@asdas.com"]},"messageId":"<3d885d90-2882-1167-7f29-932c64c5fe5c@gmail.com>"} 
+22:08:17.350 INFO  🎌 INFO ON IVEmail 
+22:08:17.350 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":431,"messageTime":761,"messageSize":6687,"response":"250 2.0.0 OK 1526180897 202-v6sm2383376vkf.4 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<b99d619b-3915-915b-89e5-ab8efe339aec@gmail.com>"} 
+22:08:20.904 INFO  🎌 INFO ON IVEmail 
+22:08:20.904 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":292,"messageTime":572,"messageSize":6687,"response":"250 2.0.0 OK 1526180901 y21-v6sm1436625vkb.48 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<cd354f86-884d-8296-bc22-ce5921e60fee@gmail.com>"} 
+22:08:22.288 INFO  🎌 INFO ON IVEmail 
+22:08:22.288 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":235,"messageTime":473,"messageSize":6687,"response":"250 2.0.0 OK 1526180902 u31-v6sm1568567uau.53 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<7c488ebd-768b-5100-14bc-be7924dee991@gmail.com>"} 
+22:10:05.826 INFO  🎌 INFO ON IVEmail 
+22:10:05.826 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":239,"messageTime":510,"messageSize":6685,"response":"250 2.0.0 OK 1526181006 q21-v6sm2417555vkf.41 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<e270c2bb-7cff-bb94-3956-4c5cf193347e@gmail.com>"} 
+18:39:18.329 INFO  🎌 INFO ON IVEmail 
+18:39:18.329 INFO  {"accepted":["ycarolinatovar51@gmail.com"],"rejected":[],"envelopeTime":375,"messageTime":775,"messageSize":6622,"response":"250 2.0.0 OK 1526254757 q187-v6sm1499839vkq.10 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["ycarolinatovar51@gmail.com"]},"messageId":"<3c613c00-afcc-5030-44df-c9e4409c011b@gmail.com>"} 
