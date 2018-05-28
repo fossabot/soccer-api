@@ -21,6 +21,14 @@ class MEquipo {
 			foto: String,
 			categoria: String,
 			privado: Boolean,
+			created: {
+				type: Schema.Types.Date,
+				default: new Date()
+			},
+			lider: {
+				type: Schema.Types.ObjectId,
+				ref: 'MJugador'
+			},
 			estado: {
 				type: String,
 				default: 'A'

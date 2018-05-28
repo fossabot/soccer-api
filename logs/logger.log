@@ -51,3 +51,26 @@ ReferenceError: SMS_COfNFIG is not defined
 22:10:05.826 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":239,"messageTime":510,"messageSize":6685,"response":"250 2.0.0 OK 1526181006 q21-v6sm2417555vkf.41 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<e270c2bb-7cff-bb94-3956-4c5cf193347e@gmail.com>"} 
 18:39:18.329 INFO  🎌 INFO ON IVEmail 
 18:39:18.329 INFO  {"accepted":["ycarolinatovar51@gmail.com"],"rejected":[],"envelopeTime":375,"messageTime":775,"messageSize":6622,"response":"250 2.0.0 OK 1526254757 q187-v6sm1499839vkq.10 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["ycarolinatovar51@gmail.com"]},"messageId":"<3c613c00-afcc-5030-44df-c9e4409c011b@gmail.com>"} 
+02:13:16.368 ERROR 💀 ERROR ON IVEmail 
+02:13:16.368 ERROR No recipients defined
+Error: No recipients defined
+    at SMTPConnection._formatError (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-connection/index.js:606:19)
+    at SMTPConnection._setEnvelope (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-connection/index.js:815:34)
+    at SMTPConnection.send (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-connection/index.js:431:14)
+    at sendMessage (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-transport/index.js:226:28)
+    at connection.login.err (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-transport/index.js:284:25)
+    at SMTPConnection._actionAUTHComplete (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-connection/index.js:1349:9)
+    at SMTPConnection._responseActions.push.str (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-connection/index.js:366:26)
+    at SMTPConnection._processResponse (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-connection/index.js:762:20)
+    at SMTPConnection._onData (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-connection/index.js:558:14)
+    at TLSSocket._socket.on.chunk (/home/juan/pro/universidad/ing/soccer-api/node_modules/nodemailer/lib/smtp-connection/index.js:510:47)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at TLSSocket.Readable.push (_stream_readable.js:208:10)
+    at TLSWrap.onread (net.js:607:20) 
+02:14:04.326 INFO  🎌 INFO ON IVEmail 
+02:14:04.326 INFO  {"accepted":["mortombolo@gmail.com"],"rejected":[],"envelopeTime":633,"messageTime":835,"messageSize":6696,"response":"250 2.0.0 OK 1527405244 m19-v6sm8982356vkm.53 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["mortombolo@gmail.com"]},"messageId":"<8851f581-259a-c35a-f85c-42acc9df2e03@gmail.com>"} 
+14:45:26.535 INFO  🎌 INFO ON IVEmail 
+14:45:26.536 INFO  {"accepted":["juanmarfil9696@gmail.com"],"rejected":[],"envelopeTime":482,"messageTime":864,"messageSize":6724,"response":"250 2.0.0 OK 1527450326 g45-v6sm3989897uac.3 - gsmtp","envelope":{"from":"monobn96@gmail.com","to":["juanmarfil9696@gmail.com"]},"messageId":"<56ec63f0-bf8b-6635-86fb-3dac3e29ff00@gmail.com>"} 

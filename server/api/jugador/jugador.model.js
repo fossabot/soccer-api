@@ -26,7 +26,10 @@ class MJugador {
 				type: String,
 				default: 'A'
 			},
-			urlFoto: String,
+			urlFoto: {
+				type:String,
+				default: '/assets/imgs/player.png'
+			},
 			descripcion: String,
 			confirmado: {
 				type: Boolean,

@@ -23,6 +23,7 @@ class Api {
 		this.put = this.put.bind(this);
 		this.search = this.search.bind(this);
 		this.delete = this.delete.bind(this);
+		this.populate = this.populate.bind(this);
 		this.schemaValidator = this.schemaValidator.bind(this);
 		//Instancia de ruteador(Creador de apis)
 		this.router = express.Router();
@@ -37,6 +38,7 @@ class Api {
 		this.router.post(`${this.path}/search`, this.search);
 		this.router.put(`${this.path}/:id`, this.put);
 		this.router.delete(`${this.path}/:id`, this.delete);
+		this.router.post(`${this.path}/populate/:id`, this.populate);
 		return this.router;
 	}
 
@@ -136,6 +138,23 @@ class Api {
 					.catch(err => res.send(err))
 			})
 			.catch(err => res.send(err));
+	}
+
+
+	populate(req, res) {
+		if (!req.params.id)
+			res.status(500).send('Es necesario proveer un id en los parametrosde la url');
+		if (!req.body.populate.length)
+			res.status(500).send('Es necesario proveer al menos un valor para hacer populate');
+		let query = this.dbEntity.findById(req.params.id)
+
+		req.body.populate.forEach(join => query.populate(join));
+		query.then(response => {
+				res.send(response)
+			})
+			.catch(error => {
+				res.status(500).send(error);
+			})
 	}
 
 	/**

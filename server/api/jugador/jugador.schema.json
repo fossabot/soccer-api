@@ -13,9 +13,6 @@
 		"contrasena": {
 			"type": "string"
 		},
-		"lider": {
-			"type": "boolean"
-		},
 		"estado": {
 			"type": "string"
 		},

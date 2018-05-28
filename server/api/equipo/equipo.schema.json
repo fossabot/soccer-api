@@ -17,10 +17,16 @@
 			"type": "string"
 		},
 		"integrantes": {
-			"type": "array"
+			"type": ["array", "string"]
+		},
+		"lider" : {
+			"type": "string"
 		},
 		"privado": {
 			"type": "boolean"
+		},
+		"populate": {
+			"type": "array"
 		}
 	}
 }

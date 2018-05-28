@@ -4,15 +4,13 @@ import Api from '../api';
  * API encargada de las tramas y metodos de consumo para la entidad partido
  * @class Partido
  */
-class Partido extends Api {
+class Partido {
 	/**
 	 * Punto de entrada de la clase
 	 * @memberof Partido
 	 */
 	constructor() {
-		//Llama al constructor de la clase API y guarda el mapa del router para modificaciònes posteriormente
-		let _router = super(new MPartido(), '/partido');
-		this.router = _router;
+		return new Api(new MPartido(), '/partido');
 	}
 }
 
